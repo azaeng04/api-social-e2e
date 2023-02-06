@@ -20,3 +20,5 @@ To execute the tests perform the following:
 
 ## for docker
 1. Execute `docker compose run e2e`
+
+**NB: for macOS users running on arm64 for some reason the docker setup does not work, but the local setup does. Manually entering the docker container and executing the tests does work though.**

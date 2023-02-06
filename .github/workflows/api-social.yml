@@ -11,8 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Build and Run E2E tests
+    - name: Build E2E tests
       run: docker-compose -f "docker-compose.yml" up -d --build
+
+    - name: Run E2E tests
+      run: pnpm test
 
     - name: Stop containers
       if: always()

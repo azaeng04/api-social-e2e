@@ -11,12 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Build E2E tests
-      run: docker-compose -f "docker-compose.yml" up -d --build
-    
     - uses: pnpm/action-setup@v2
       with:
         version: 7.26.3
+
+    - name: Install dependencies
+      run: pnpm install
 
     - name: Run E2E tests
       run: pnpm test

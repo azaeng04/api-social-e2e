@@ -14,7 +14,7 @@ jobs:
     - name: Build and Run E2E tests
       uses: isbang/compose-action@v1.4.1
       with:
-        up-flags: e2e
+        up-flags: "e2e"
         compose-file: "./docker-compose.yml"
         services: |
           e2e
